@@ -1,0 +1,43 @@
+[0:08:42] Сергей Ющенко: public abstract class MusicalInstrument {
+    String typeName;
+    public abstract String getType();
+    abstract String  getName();
+
+    @Override
+    public String toString() {
+        return "MusicalInstrument{"+getType()+"}";
+    }
+}
+[0:08:54] Сергей Ющенко: public class Guitar extends MusicalInstrument {
+
+    String name;
+
+    public Guitar(String name) {
+        this.name = name;
+        System.out.println("Работает:public class Guitar-----------------------------------------------------------------------------------------");
+        System.out.println("Создали объект с именем: " + name);
+    }
+
+    @Override
+    public String getType() {
+        return "guitar";
+    }
+
+    @Override
+    String getName() {
+        return name;
+    }
+}
+[0:09:34] Сергей Ющенко: public void showListOrderToSale(){
+
+        System.out.println("Работает public class Servises/ShowlistOrderToSale(){-----------------------------------------------------------------------------------------");
+        System.out.println("В полном списке для продажи у нас объекты с именами");
+        for (int i = 0; i <listOrderToSale.size() ; i++) {
+            /// Не могу вывести имя объекта в списке.
+            System.out.println(listOrderToSale.get(i).getName());
+
+            //System.out.println(listOrderToSale);
+        }
+    }
+
+и это работает
